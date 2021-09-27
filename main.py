@@ -7,13 +7,14 @@ class Automate:
     path: str =  r'D:\PY Files\My Projects\resume-automation\Target'
 
 
-    def get_path(self):
+    def read_files(self):
         files = os.listdir(self.path)
 
         for file in files:
-            print(file)
+            temp = file.split("_")
+            print(temp)
 
 if __name__ == "__main__":
     a = Automate()
 
-    a.get_path()
+    a.read_files()
