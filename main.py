@@ -1,11 +1,11 @@
 import os
 from dataclasses import dataclass
+from pathlib import Path
 
 @dataclass
 class Automate:
 
-    path: str =  r'D:\PY Files\My Projects\resume-automation\Target'
-
+    path: str = Path.cwd() / "Target"
 
     def read_files(self):
         files = os.listdir(self.path)
